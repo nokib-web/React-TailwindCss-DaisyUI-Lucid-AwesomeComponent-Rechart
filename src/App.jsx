@@ -3,14 +3,13 @@ import { Suspense } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import PricingOption from './components/PricingOption/PricingOption'
-import { Heading1 } from 'lucide-react'
 import ResultsCharts from './components/ResultCharts/ResultsCharts'
 import axios from 'axios'
 import MarksCharts from './components/MarksChart/MarksCharts'
 
 
 
-const pricingPromise= fetch('/PricingData.json').then(res=>res.json());
+const pricingPromise= fetch('PricingData.json').then(res=>res.json());
 const marksPromise = axios.get('Marks.json')
 
 function App() {
